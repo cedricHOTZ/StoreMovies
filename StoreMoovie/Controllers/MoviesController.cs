@@ -53,11 +53,11 @@ namespace StoreMoovie.Controllers
         }
 
         // POST: Movies/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,IdGenre")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Name,DateDeSortie,Stock,IdGenre")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -87,11 +87,11 @@ namespace StoreMoovie.Controllers
         }
 
         // POST: Movies/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,IdGenre")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,DateDeSortie,Stock,IdGenre")] Movie movie)
         {
             if (id != movie.Id)
             {

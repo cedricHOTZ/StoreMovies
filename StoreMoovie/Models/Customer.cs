@@ -10,14 +10,17 @@ namespace StoreMoovie.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "La nom est requis")]
         [StringLength(255)]
         public string Name { get; set; }
         // inscrit a une newsletter
       
-           // [DisplayFormat(DataFormatString="{0:dd/MM/YYYY}")]
+          
         [DataType(DataType.Date)]
+       [VerifAge18]
         public DateTime? Birthday { get; set; }
+
+       
         public bool IsSubscribedToNewsletter { get; set; }
 
         //relation avec la table adhesion
@@ -25,6 +28,7 @@ namespace StoreMoovie.Models
         [ForeignKey("Adhesion")]
         //Affiche le texte dans le form
         [Display(Name = "choix de l'adhesion")]
+        [Required]
         public int AdhesionId { get; set; }
 
         public Adhesion Adhesion { get; set; }

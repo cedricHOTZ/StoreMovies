@@ -69,16 +69,17 @@ namespace StoreMoovie.Controllers
         {
             if (ModelState.IsValid)
             {
+                // sauvegarde en BDD
                 _context.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "AdhesionId", "AdhesionId");
+            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "Name", "Name");
             return View(customer);
         }
 
         // GET: Customers/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? id , NewCustomerViewModel viewModel)
         {
             if (id == null)
             {
