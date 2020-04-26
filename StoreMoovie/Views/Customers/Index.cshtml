@@ -49,7 +49,7 @@
                <!-- Lien pour aller sur la page pour supprimer un utilisateur
                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> -->
 
-                <button class="btn-linkv js-delete">Delete</button>
+                <button data-customer-id="@item.Id" class="btn-linkv js-delete">Delete</button>
             </td>
         </tr>
 }
@@ -59,7 +59,16 @@
 <script>
     $(document).ready(function () {
         $("#customers .js-delete").on("click", function () {
-            confirm("are you sur")
+            var button = $(this);
+            if (confirm("êtes vous sur de vouloir supprimer l'utilisateur")) {
+                $.ajax({
+                    url: "/api/customers/" + $(this).attr("data-customer-id"),
+                    method: "DELETE",
+                    success: function () {
+                        button.parents("tr").remove();
+                    }
+                })
+            }
         });
     });
 </script>
