@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table id="customers"class="table">
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -45,22 +45,9 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-
-               <!-- Lien pour aller sur la page pour supprimer un utilisateur
-                   <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> -->
-
-                <button class="btn-linkv js-delete">Delete</button>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-@section scripts{
-<script>
-    $(document).ready(function () {
-        $("#customers .js-delete").on("click", function () {
-            confirm("are you sur")
-        });
-    });
-</script>
- }

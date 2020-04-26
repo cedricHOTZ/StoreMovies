@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StoreMoovie.Dtos;
 
 namespace StoreMoovie.Data
 {
@@ -23,6 +24,8 @@ namespace StoreMoovie.Data
         public DbSet<Adhesion> Adhesions { get; set; }
 
         public DbSet<Genres> Genres { get; set; }
+
+        public DbSet<StoreMoovie.Dtos.MovieDto> MovieDto { get; set; }
 
 
     }

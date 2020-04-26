@@ -1,36 +1,37 @@
-﻿using Microsoft.OData.Edm;
-using Newtonsoft.Json;
+﻿using StoreMoovie.Models;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace StoreMoovie.Models
+namespace StoreMoovie.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
-        [Key]
+       
         public int Id { get; set; }
-        [Required(AllowEmptyStrings = false, ErrorMessage = "La nom est requis")]
+        [Required]
         [StringLength(255)]
         public string Name { get; set; }
         // inscrit a une newsletter
-      
-          
+
+
         [DataType(DataType.Date)]
-     
+    
         public DateTime? Birthday { get; set; }
 
-       
+
         public bool IsSubscribedToNewsletter { get; set; }
 
         //relation avec la table adhesion
 
-        [ForeignKey("Adhesion")]
+       
         //Affiche le texte dans le form
-        [Display(Name = "choix de l'adhesion")]
-        [Required]
+      
         public int AdhesionId { get; set; }
 
-        public Adhesion Adhesion { get; set; }
+      
     }
 }
+

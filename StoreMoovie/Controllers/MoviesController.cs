@@ -48,6 +48,11 @@ namespace StoreMoovie.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
+            //ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "Name", "Name", customer.AdhesionId);
+
+              //< label asp -for= "Customer.AdhesionId" class="control-label"></label>
+              //  <select asp-for="Customer.Adhesion.Name"  class="form-control" asp-items=" ViewBag.AdhesionId" >
+                   
             ViewData["IdGenre"] = new SelectList(_context.Genres, "IdGenre", "Name");
             return View();
         }
@@ -59,13 +64,19 @@ namespace StoreMoovie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,DateDeSortie,Stock,IdGenre")] Movie movie)
         {
+
+         
+
             if (ModelState.IsValid)
             {
+               
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+           
             ViewData["IdGenre"] = new SelectList(_context.Genres, "IdGenre", "Name", movie.IdGenre);
+           
             return View(movie);
         }
 

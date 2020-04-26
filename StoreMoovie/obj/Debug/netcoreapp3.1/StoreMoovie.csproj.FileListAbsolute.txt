@@ -168,5 +168,12 @@ C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcore
 C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Details.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Edit.cshtml.g.cs
 C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\bin\Debug\netcoreapp3.1\Microsoft.OData.Edm.dll
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\StoreMoovie.csproj.CoreCompileInputs.cache
 C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\StoreMoovie.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Customers1\Create.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Customers1\Delete.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Customers1\Details.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Customers1\Edit.cshtml.g.cs
+C:\Users\Utilisateur\Documents\Asp.net\StoreMoovie\StoreMoovie\obj\Debug\netcoreapp3.1\Razor\Views\Customers1\Index.cshtml.g.cs

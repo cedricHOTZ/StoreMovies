@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using StoreMoovie.Data;
 using StoreMoovie.Models;
-using StoreMoovie.ViewModels;
 
 namespace StoreMoovie.Controllers
 {
@@ -21,10 +19,9 @@ namespace StoreMoovie.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
         // GET: Customers
+        public async Task<IActionResult> Index()
         {
-            //include (recupere les info dans la table Adhesion en rapport avec le customers
             var defaultContext = _context.Customers.Include(c => c.Adhesion);
             return View(await defaultContext.ToListAsync());
         }
@@ -49,37 +46,31 @@ namespace StoreMoovie.Controllers
         }
 
         // GET: Customers/Create
-        public IActionResult Create(NewCustomerViewModel vm)
+        public IActionResult Create()
         {
-            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "Name", "Name");
-
-            
-            var adhesion = _context.Adhesions.ToList();
-           
-            
+            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "AdhesionId", "Name");
             return View();
         }
 
         // POST: Customers/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(NewCustomerViewModel vm ,Customer customer, Adhesion adhesion)
+        public async Task<IActionResult> Create([Bind("Id,Name,Birthday,IsSubscribedToNewsletter,AdhesionId")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                // sauvegarde en BDD
                 _context.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "Name", "Name");
+            ViewData["AdhesionId"] = new SelectList(_context.Adhesions, "AdhesionId", "Name", customer.AdhesionId);
             return View(customer);
         }
 
         // GET: Customers/Edit/5
-        public async Task<IActionResult> Edit(int? id , NewCustomerViewModel viewModel)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -96,11 +87,11 @@ namespace StoreMoovie.Controllers
         }
 
         // POST: Customers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,IsSubscribedToNewsletter,AdhesionId")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Birthday,IsSubscribedToNewsletter,AdhesionId")] Customer customer)
         {
             if (id != customer.Id)
             {
