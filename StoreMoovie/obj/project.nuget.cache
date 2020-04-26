@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "v2vVuDaqxqKvCFPjMEd6jLDMPz+gCC/dzgve3VX/SaJCpffB1opYo6GWRWPJFUXFFpYFdoS6PMuzj0vFOmYTNA==",
+  "dgSpecHash": "JbhG0XcNg/Bk0ffG8zJxzl1P6BcYQN7thJifT6CPQa6WtUAAn1/zScdobam0Kef77fLLZgB6vUZAFo+0/O+FeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\Asp.net\\StoreMoovie\\StoreMoovie\\StoreMoovie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Utilisateur\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\bootbox.js\\5.2.0\\bootbox.js.5.2.0.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\jquery\\1.12.4\\jquery.1.12.4.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

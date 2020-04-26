@@ -24,9 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "StoreMoovie/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Bootbox.JS": "5.2.0",
           "Microsoft.EntityFrameworkCore": "3.1.3",
           "Microsoft.EntityFrameworkCore.Design": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
@@ -334,12 +332,6 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Bootbox.JS/5.2.0": {
-        "dependencies": {
-          "jQuery": "1.12.4"
-        }
-      },
-      "jQuery/1.12.4": {},
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "4.5.0"
@@ -3929,20 +3921,6 @@
       "sha512": "sha512-szI4yeRIM7GWe9JyekW0dKYehPB0t6M+I55fPeCebN6PhS7zQZa0eG3bgOnOx+eP3caSNoE7KEJs2rk7MLsh8w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
-    },
-    "Bootbox.JS/5.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-opAeo1fExWERzwcuhswMUW0xG083JlL8pGrarWvmLMaCxwbfoP1IOFhnugpf+X1nq01C71SACculHXeShBjIbg==",
-      "path": "bootbox.js/5.2.0",
-      "hashPath": "bootbox.js.5.2.0.nupkg.sha512"
-    },
-    "jQuery/1.12.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pIYtWlFI5PGlJVB8jm9H96pAQ27jQhA9sCxMeGweeC3ByQRaB8BwkIuGdTt4go3IEKTmmfRC2y5k0FLFizWDQg==",
-      "path": "jquery/1.12.4",
-      "hashPath": "jquery.1.12.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
