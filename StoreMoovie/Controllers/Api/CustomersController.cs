@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -29,11 +30,17 @@ namespace StoreMoovie.Controllers.Api
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
-        List<CustomerDto> customers = _mapper.Map<List<Customer>, List<CustomerDto>>(await _context.Customers.ToListAsync());
+            List<CustomerDto> customers = _mapper.Map<List<Customer>, List<CustomerDto>>
+                (await _context.Customers
+               .Include(c =>c.Adhesion)
+                .ToListAsync());
 
             return Ok(customers);
         }
 
+      
+
+       
         // GET: api/Customers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Customer>> GetCustomer(int id)

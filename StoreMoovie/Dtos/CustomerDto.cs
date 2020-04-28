@@ -24,13 +24,15 @@ namespace StoreMoovie.Dtos
 
         public bool IsSubscribedToNewsletter { get; set; }
 
-        //relation avec la table adhesion
-
-       
         //Affiche le texte dans le form
-      
+
         public int AdhesionId { get; set; }
 
+        //relation avec la table adhesion
+
+        public AdhesionDto Adhesion { get; set; }
+       
+       
       
     }
 }

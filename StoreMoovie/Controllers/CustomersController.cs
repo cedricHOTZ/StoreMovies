@@ -20,11 +20,15 @@ namespace StoreMoovie.Controllers
         }
 
         // GET: Customers
-        public async Task<IActionResult> Index()
+        public ViewResult index()
         {
-            var defaultContext = _context.Customers.Include(c => c.Adhesion);
-            return View(await defaultContext.ToListAsync());
+            return View();
         }
+        //public async Task<IActionResult> Index()
+        //{
+        //    var defaultContext = _context.Customers.Include(c => c.Adhesion);
+        //    return View(await defaultContext.ToListAsync());
+        //}
 
         // GET: Customers/Details/5
         public async Task<IActionResult> Details(int? id)

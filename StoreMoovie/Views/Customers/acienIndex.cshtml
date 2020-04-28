@@ -13,29 +13,54 @@
     <thead>
         <tr>
             <th>
-               Customer
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-               Adhesion
+                @Html.DisplayNameFor(model => model.Birthday)
             </th>
             <th>
-              Delete
+                @Html.DisplayNameFor(model => model.IsSubscribedToNewsletter)
             </th>
-           
+            <th>
+                @Html.DisplayNameFor(model => model.Adhesion)
+            </th>
             
         </tr>
     </thead>
-    <tbody>
-  
+    <body>
+   @foreach(var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birthday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSubscribedToNewsletter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adhesion.AdhesionId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
 
-          
-    </tbody>
+              
+                   <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                <button data-customer-id="@item.Id" class="btn-linkv js-delete">Delete</button>
+            </td>
+
+        </tr>
+}
+           -->
+    </body>
 </table>
 
 @section scripts{
 <script>
     $(document).ready(function () {
-       
         $("#customers").DataTable({
             ajax: {
                 url: "/api/customers",
@@ -45,27 +70,23 @@
                 {
                     data: "name",
                     render: function (data, type, customer) {
-                        return "<a href='/customers/edit/" + customer.id + "'>" + customer.name + "</a>";
+                        return "<a href='/customers/edit/" + customer.Id + "'>" + customer.Name + "</a>";
 
 
                     }
                 },
-              
                 {
-                    data: "adhesion.name"
+                    data: "name"
                 },
                 {
                     data: "id",
                     render: function (data) {
-                        return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
+                        return "<button class='btn-link js-delete' data-customer-id" + data + ">Delete</button>";
+
                     }
                 }
-               
-              
-                
             ]
         });
-
         $("#customers").on("click",".js-delete", function () {
             var button = $(this);
       

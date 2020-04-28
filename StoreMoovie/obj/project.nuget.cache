@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JbhG0XcNg/Bk0ffG8zJxzl1P6BcYQN7thJifT6CPQa6WtUAAn1/zScdobam0Kef77fLLZgB6vUZAFo+0/O+FeA==",
+  "dgSpecHash": "yeIFrodPZigDBtp2CLeTA0mdu4vzf7qLk0B+o1zLNRB59wicUe8BLXbMWawhprT9/FG3f3So4t4ngIiK7HXJdg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\Asp.net\\StoreMoovie\\StoreMoovie\\StoreMoovie.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\3.1.1\\microsoft.entityframeworkcore.sqlite.3.1.1.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\3.1.1\\microsoft.entityframeworkcore.sqlite.core.3.1.1.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.3\\microsoft.entityframeworkcore.sqlserver.3.1.3.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.3\\microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.2\\microsoft.entityframeworkcore.tools.3.1.2.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.3\\microsoft.extensions.caching.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.3\\microsoft.extensions.caching.memory.3.1.3.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.3\\microsoft.extensions.configuration.3.1.3.nupkg.sha512",

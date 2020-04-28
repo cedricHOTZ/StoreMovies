@@ -18,6 +18,9 @@ namespace StoreMoovie.Dtos
             CreateMap<Movie, MovieDto>();
             CreateMap<MovieDto, Movie>();
 
+            CreateMap<Adhesion, AdhesionDto>();
+            CreateMap<AdhesionDto, Adhesion>();
+
 
 
         }
