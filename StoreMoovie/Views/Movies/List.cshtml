@@ -1,0 +1,60 @@
+﻿@model IEnumerable<StoreMoovie.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List des films</h1>
+
+
+<table id="movies"class="table">
+     <thead>
+        <tr>
+           <th>Films</th>
+            <th>Genre</th>
+          
+        </tr>
+    </thead>
+   
+</table>
+    @section scripts{
+<script>
+    $(document).ready(function () {
+
+        $("#movies").DataTable({
+            ajax: {
+                url: "/api/movies",
+                dataSrc: ""
+            },
+            columns: [
+                {
+                    data: "name"
+                    
+                },
+
+                {
+                    data: "genres.name"
+                }
+
+
+
+            ]
+        });
+      
+    });
+          //bootbox.alert("êtes vous sur de vouloir supprimer l'utilisateur", function (result) {
+            //    if (result) {
+            //        $.ajax({
+            //            url: "/api/customers/" + $(this).attr("data-customer-id"),
+            //            method: "DELETE",
+            //            success: function () {
+            //                button.parents("tr").remove();
+            //            }
+            //            });
+            //            }
+            //        });
+            //    });
+            //});
+</script>
+ }
